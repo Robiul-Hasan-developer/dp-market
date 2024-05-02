@@ -3,7 +3,6 @@ import Logo from './Logo';
 import NavMenu from './NavMenu';
 import { MobileMenuContext } from '../contextApi/MobileMenuContext';
 import { ScrollHideContext } from '../contextApi/ScrollHideContext';
-import Button from './Button';
 import Language from './Language';
 
 const MobileMenu = () => {

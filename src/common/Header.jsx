@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavMenu from './NavMenu';
 import { Link } from 'react-router-dom';
 import LogoImgOne from '../../public/assets/images/logo/logo.png';

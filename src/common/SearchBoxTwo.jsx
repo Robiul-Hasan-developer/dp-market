@@ -16,7 +16,7 @@ const SearchBoxTwo = () => {
             <form action="#" className="search-box style-two">
                 <div className="search-box__select select-has-icon">
                     <select className="form-control form-control py-0 border-0 bg-transparent">
-                        <option value="1" defaultValue>All Categories</option>
+                        <option defaultValue>All Categories</option>
                         {
                             bannerCategories.map((bannerCategory, bannerCategoryIndex) => {
                                 return (

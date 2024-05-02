@@ -81,7 +81,7 @@ export const navMenus = [
         },
         {
             text: "Preview Order",
-            path: "/preview-order",
+            path: "/cart-preview",
         },
         {
             text: "Dashboard",

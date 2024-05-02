@@ -15,7 +15,7 @@ const HeaderRight = (props) => {
 
     const { handleMobileMenuClick } = useContext(MobileMenuContext); 
 
-    const { handleScrollHide, handleScrollHideLg } = useContext(ScrollHideContext); 
+    const { handleScrollHide } = useContext(ScrollHideContext); 
     
     return (
         <>

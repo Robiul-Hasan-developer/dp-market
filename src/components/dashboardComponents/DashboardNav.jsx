@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Language from '../../common/Language';
 import LightDarkMode from '../../common/LightDarkMode';
 import DashboardUserProfile from './DashboardUserProfile';
+import { DashboardContext } from '../../contextApi/DashboardContext';
 
 const DashboardNav = () => {
+
+    const {collapseSidebar, handleCollapseSidebar} = useContext(DashboardContext);
+    
     return (
         <div className="dashboard-nav bg-white flx-between gap-md-3 gap-2">
             <div className="dashboard-nav__left flx-align gap-md-3 gap-2">
-                <button type="button" className="icon-btn bar-icon text-heading bg-gray-seven flx-center">
-                    <i className="las la-bars"></i>
-                </button>
-                <button type="button" className="icon-btn arrow-icon text-heading bg-gray-seven flx-center">
-                    <img src="assets/images/icons/angle-right.svg" alt=""/>
+                <button type="button" className="icon-btn bar-icon text-heading bg-gray-seven flx-center" onClick={handleCollapseSidebar}> 
+                    {
+                        collapseSidebar ? (
+                            <i class="las la-arrow-right"></i>
+                        ) : (
+                            <i className="las la-bars"></i>
+                        )
+                    }
                 </button>
                 <form action="#" className="search-input d-sm-block d-none">
                     <span className="icon">

@@ -18,7 +18,7 @@ import Footer from '../common/Footer';
 const HomeOne = () => {
     return (
         <>
-            <PageTitle title="DP Market - Home Page" />
+            <PageTitle title="DP Market - Home" />
             <MobileMenu/>
             
             <main className="change-gradient">

@@ -34,7 +34,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(0, 8).map((productItem, productIndex) => {
+                            products.slice(1, 9).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 
@@ -70,7 +70,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(0, 8).map((productItem, productIndex) => {
+                            products.slice(3, 12).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 
@@ -88,7 +88,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(4, 12).map((productItem, productIndex) => {
+                            products.slice(1, 10).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 
@@ -106,7 +106,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(0, 8).map((productItem, productIndex) => {
+                            products.slice(5, 11).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 
@@ -124,7 +124,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(4, 12).map((productItem, productIndex) => {
+                            products.slice(2, 10).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 
@@ -142,7 +142,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(0, 8).map((productItem, productIndex) => {
+                            products.slice(3, 12).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 
@@ -160,7 +160,7 @@ const ArrivalProducts = () => {
                 <TabPanel>
                     <div className="row gy-4">
                         {
-                            products.slice(4, 12).map((productItem, productIndex) => {
+                            products.slice(2, 10).map((productItem, productIndex) => {
                                 return (
                                     <ProductItem 
                                         colClasses="col-xl-3 col-lg-4 col-sm-6" 

@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DashboardProfileInfo from './DashboardProfileInfo';
+import { DashboardStateContext } from '../../contextApi/DashboardStateContext';
+import { getCurrentFormattedDate } from '../../utility/Utility';
+import UploadImage from './UploadImage';
 
 const DashboardProfileContent = () => {
+
+    const { userNameData } = useContext(DashboardStateContext);
+    
+    const currentDate = getCurrentFormattedDate(); 
+    
     return (
         <div className="profile">
             <div className="row gy-4">
@@ -9,20 +17,9 @@ const DashboardProfileContent = () => {
                     <div className="profile-info">
                         <div className="profile-info__inner mb-40 text-center">
 
-                            <div className="avatar-upload mb-24">
-                                <div className="avatar-edit">
-                                    <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg"/>
-                                    <label for="imageUpload">
-                                        <img src="assets/images/icons/camera.svg" alt=""/>
-                                    </label>
-                                </div>
-                                <div className="avatar-preview">
-                                    <div id="imagePreview">
-                                    </div>
-                                </div>
-                            </div>
+                            <UploadImage imageType="profile" />
                             
-                            <h5 className="profile-info__name mb-1">Michel Smith</h5>
+                            <h5 className="profile-info__name mb-1">{userNameData}</h5>
                             <span className="profile-info__designation font-14">Exclusive Author</span>
                         </div>
 
@@ -32,14 +29,14 @@ const DashboardProfileContent = () => {
                                     <img src="assets/images/icons/profile-info-icon1.svg" alt="" className="icon"/>
                                     <span className="text text-heading fw-500">Username</span>
                                 </span>
-                                <span className="profile-info-list__info">michel15</span>
+                                <span className="profile-info-list__info">{userNameData}</span>
                             </li>
                             <li className="profile-info-list__item">
                                 <span className="profile-info-list__content flx-align flex-nowrap gap-2">
                                     <img src="assets/images/icons/profile-info-icon2.svg" alt="" className="icon"/>
                                     <span className="text text-heading fw-500">Email</span>
                                 </span>
-                                <span className="profile-info-list__info">michel15@gmail.com</span>
+                                <span className="profile-info-list__info">{userNameData.replace(/\s+/g, '').toLowerCase()}@gmail.com</span>
                             </li>
                             <li className="profile-info-list__item">
                                 <span className="profile-info-list__content flx-align flex-nowrap gap-2">
@@ -67,7 +64,7 @@ const DashboardProfileContent = () => {
                                     <img src="assets/images/icons/profile-info-icon6.svg" alt="" className="icon"/>
                                     <span className="text text-heading fw-500">Member Since</span>
                                 </span>
-                                <span className="profile-info-list__info">Jan, 01, 2024</span>
+                                <span className="profile-info-list__info">{currentDate}</span>
                             </li>
                             <li className="profile-info-list__item">
                                 <span className="profile-info-list__content flx-align flex-nowrap gap-2">

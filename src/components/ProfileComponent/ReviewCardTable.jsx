@@ -12,7 +12,6 @@ const ReviewCardTable = () => {
 
     // Random Sales & Rating 
     const {randomRatingText, randomSales} = getRandomNumber(); 
-
     
     return (
         <div className="card common-card border border-gray-five">
@@ -75,16 +74,16 @@ const ReviewCardTable = () => {
                     <div className="flx-between gap-2">
                         <div className="paginate-content flx-align flex-nowrap gap-3">
                             <select className="select common-input py-2 px-3 w-auto">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                                <option defaultValue="1">1</option>
+                                <option defaultValue="2">2</option>
+                                <option defaultValue="3">3</option>
+                                <option defaultValue="4">4</option>
+                                <option defaultValue="5">5</option>
+                                <option defaultValue="6">6</option>
+                                <option defaultValue="7">7</option>
+                                <option defaultValue="8">8</option>
+                                <option defaultValue="9">9</option>
+                                <option defaultValue="10">10</option>
                             </select>
                             <span className="paginate-content__text fs-14">Showing 1 - 10 of 100</span>
                         </div>

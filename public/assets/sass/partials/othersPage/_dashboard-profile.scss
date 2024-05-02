@@ -22,10 +22,10 @@
                 height: unset;
                 border-radius: 8px;
                 padding: 8px 12px;
-                color: hsl(var(--white));
+                color: hsl(var(--static-white));
                 gap: 8px;
                 border: 0;
-                background: hsl(var(--black) / 0.5);
+                background: #787a8e;
                 backdrop-filter: blur(8px);
                 font-weight: 300;
                 &:hover {
@@ -95,6 +95,8 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            border-radius: 50%;
+            overflow: hidden;
         }
     }
 }

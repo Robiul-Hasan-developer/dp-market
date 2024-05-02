@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import BreadcrumbGradient from '../../public/assets/images/gradients/breadcrumb-gradient-bg.png';
 import BreadcrumbList from './BreadcrumbList';
 import { Link, useLocation } from 'react-router-dom';

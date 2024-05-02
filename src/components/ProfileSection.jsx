@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ProfileContent from './ProfileComponent/ProfileContent';
-import SearchBox from './../common/SearchBox';
 import { productFilterTabs } from '../data/OthersPageData/OthersPageData';
 import { products } from '../data/HomeOneData/HomeOneData';
 import ProductItem from './items/ProductItem';
@@ -22,7 +21,6 @@ const ProfileSection = () => {
     const handleSearchValueChange = (event) => {
         const searchText = event.target.value; 
         const searchTextLowercase = searchText.toLowerCase().trim(); 
-        console.log(searchTextLowercase);
         setSearchValue(searchTextLowercase); 
     }
     
@@ -54,8 +52,6 @@ const ProfileSection = () => {
                                     }
                                 </TabList>
                                 
-                                {/* <SearchBox formClass="style-three" inputClass="pill search-item"  placeholderText="Search Product..."/> */}
-
                                 <form action='#' className={`search-box style-three`}>
                                     <input type="text" className={`common-input pill search-item`} onChange={handleSearchValueChange} placeholder="Search Product..."/>
                                     <button type="submit" className="btn btn-main btn-icon icon border-0">
@@ -84,28 +80,13 @@ const ProfileSection = () => {
                                             }
                                             {
                                                 products.filter(productItem => productItem.title.toLowerCase().includes(searchValue)).length === 0 && (
-                                                    <div className="col-12">Product Not Found</div>
+                                                    <div className="col-12 text-center">Product Not Found</div>
                                                 )
                                             }
                                     </div>
                                 </TabPanel>
                                 <TabPanel>
                                     <div className="row gy-4 list-grid-wrapper">
-                                        {/* {
-                                            products.slice(4, 12).map((productItem, productIndex) => {
-                                                return (
-                                                    <ProductItem 
-                                                        colClasses="col-lg-4 col-sm-6" 
-                                                        cardClasses="section-bg"
-                                                        renderWishlist={true}
-                                                        renderDownloadButton={false}
-                                                        key={productIndex}
-                                                        productItem={productItem}
-                                                    />
-                                                )
-                                            })
-                                        }
-                                         */}
                                             {
                                                 products.filter(productItem => {
                                                         const productTitleLower = productItem.title.toLowerCase().includes(searchValue);

@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import Button from '../common/Button';
-import { useNavigate } from 'react-router-dom';
 import PageTitle from '../common/PageTitle';
 
 const NotFound = () => {
 
-    // Automatically redirect to previous page
-    const navigate = useNavigate(); 
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         navigate(-1)
-    //     }, 2500);
-    // }, []);
-    
     return (
         <>
         <PageTitle title="DP Market - 404 Page Not Found" />
@@ -23,10 +13,10 @@ const NotFound = () => {
                     <span className="not-found__icon">
                         <i className="far fa-frown text-body"></i>
                     </span>
-                    <h1 className='mt-4 mb-5'>404 Page Not Found</h1>   
+                    <h1 className='mt-4 mb-5 font-body'>404 Page Not Found</h1>   
                     <Button 
                         btnLink="/" 
-                        btnClass="btn-main" 
+                        btnClass="btn-main btn-lg pill" 
                         btnText="Back To Home" 
                         spanClass="icon-right" 
                         iconClass="" 

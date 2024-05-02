@@ -4,7 +4,7 @@ const CommentForm = () => {
     return (
         <div className="comment-form mt-64 mb-64" id="comment-box">
             <h5 className="mb-32">Post a comment</h5>
-            <form action="#" autocomplete="off">
+            <form action="#" autoComplete="off">
                 <div className="row gy-4">
                     <div className="col-sm-6 col-xs-6">
                         <label htmlFor="name" className="form-label mb-2 font-18 font-heading fw-600">Full Name</label>

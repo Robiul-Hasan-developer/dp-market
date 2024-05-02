@@ -36,9 +36,9 @@ const FilterForm = () => {
                     </div>
                     <div className="position-relative select-has-icon">
                         <select id="time" className="common-input border-gray-five">
-                            <option value="1">Now</option>
-                            <option value="2">Yesterday</option>
-                            <option value="2">1 Month Ago</option>
+                            <option defaultValue="1">Now</option>
+                            <option defaultValue="2">Yesterday</option>
+                            <option defaultValue="2">1 Month Ago</option>
                         </select>
                     </div>
                 </div>

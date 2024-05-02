@@ -4,7 +4,7 @@ import SearchIconWhite from '../../../public/assets/images/icons/search-dark-whi
 
 const SidebarSearch = () => {
     return (
-        <form action="#" autocomplete="off">
+        <form action="#" autoComplete="off">
             <div className="search-box w-100">
                 <input type="text" className="common-input border-0" placeholder="Type here..."/>
                 <button type="submit" className="icon line-height-1 rounded-icon white-version">

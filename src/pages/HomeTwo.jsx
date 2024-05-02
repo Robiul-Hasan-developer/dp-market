@@ -21,7 +21,7 @@ import FooterTwo from '../common/FooterTwo';
 const HomeTwo = () => {
     return (
         <>
-            <PageTitle title="DP Market - Home Page" />
+            <PageTitle title="DP Market - Home Two" />
             <MobileMenu/>
             
             <BestSeller

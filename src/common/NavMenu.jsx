@@ -1,5 +1,5 @@
-    import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { navMenus } from '../data/CommonData/CommonData';
 
 const NavMenu = (props) => {
@@ -10,14 +10,28 @@ const NavMenu = (props) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
+    const location = useLocation(); 
+    console.log(location);
+
     return (
         <>
             <ul className={`nav-menu flx-align ${props.navMenusClass}`}>
                 {
                     navMenus.map((navMenu, index) => {
+
+                        const isActiveTopLevel = location.pathname === navMenu.path;
+
+                        // matches current location paths
+                        // const isActiveSubmenu = navMenu.submenus && navMenu.submenus.some(submenu => location.pathname === submenu.path);
+                        const isActiveSubmenu = navMenu.submenus && navMenu.submenus.some(submenu => location.pathname === submenu.path);
+
+                        // add activePage class
+                        const isActive = isActiveTopLevel || isActiveSubmenu;
+                        
                         return (
                             <li
                                 className={`nav-menu__item 
+                                    ${isActive ? 'activePage' : ''}
                                     ${ navMenu.submenus && navMenu.submenus.length > 0 ? 'has-submenu' : '' } 
                                     ${ activeIndex === index ? 'active' : '' }
                                 `}
@@ -30,7 +44,7 @@ const NavMenu = (props) => {
                                         <ul className="nav-submenu">
                                             {
                                                 navMenu.submenus.map((submenu, subIndex) => (
-                                                    <li className="nav-submenu__item" key={subIndex}>
+                                                    <li className={`nav-submenu__item ${location.pathname === submenu.path ? 'activePage' : ''}`} key={subIndex}>
                                                         <Link to={submenu.path} className="nav-submenu__link">{submenu.text}</Link>
                                                     </li>
                                                 ))

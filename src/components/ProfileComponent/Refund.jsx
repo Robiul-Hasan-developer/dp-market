@@ -15,9 +15,9 @@ const Refund = () => {
                         <h6 className="title font-body">Open Request</h6>
                         <div className="select-has-icon">
                             <select className="common-input">
-                                <option value="1">Open Requests</option>
-                                <option value="1">Open Requests</option>
-                                <option value="1">Open Requests</option>
+                                <option defaultValue="1">Open Requests</option>
+                                <option defaultValue="1">Open Requests</option>
+                                <option defaultValue="1">Open Requests</option>
                             </select>
                         </div>
                     </div>

@@ -304,6 +304,7 @@
     }
     .icon-btn.bar-icon {
         background-color: var(--dark-black-three) !important;
+        color: hsl(var(--static-white)) !important;
     }
     .profile-info-list__item {
         border-bottom: 1px dashed hsl(var(--static-white)/.15);
@@ -382,6 +383,9 @@
     }
     .dashboard-card .select-sm {
         background-color: var(--dark-black-one) !important;
+    }
+    .follow-wrapper {
+        background-color: hsl(234deg 17.91% 21.81%);
     }
 }
 /* ============================ Dark Version Css End =============================== */
