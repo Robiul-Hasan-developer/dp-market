@@ -116,30 +116,30 @@ export const footerInfos = [
 export const footerQuickLinks = [ 
     {
         text: 'Reliable Rentals',
-        link: '/product'
+        link: '/products'
     },
     {
         text: 'Golden Key Properties',
-        link: '/product'
+        link: '/products'
     },
     {
         text: 'Swift Home Sales',
-        link: '/product'
+        link: '/products'
     },
     {
         text: 'Elite Realty Services',
-        link: '/product'
+        link: '/products'
     },
     {
         text: 'Dream Property Solutions',
-        link: '/product'
+        link: '/products'
     },
 ]
 
 export const footerUsefulLinks = [ 
     {
         text: 'Product',
-        link: '/product'
+        link: '/products'
     },
     {
         text: 'Profile',

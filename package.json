@@ -1,5 +1,5 @@
 {
-  "name": "react-3-real-estate",
+  "name": "react-3-dp-market",
   "homepage": "https://cityscape.wowtheme7.com/",
   "private": true,
   "version": "0.0.0",
@@ -16,7 +16,6 @@
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
-    "react-countdown": "^2.3.5",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

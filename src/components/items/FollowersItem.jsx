@@ -53,7 +53,7 @@ const FollowersItem = ({ followersListItem, followingTab, followersTab }) => {
                     <span className="sales__text mb-1 font-13 text-heading fw-500">Sales</span>
                     <h6 className="sales__amount mb-0 font-body">{formattedRandomThousandValue}</h6>
 
-                    <StarRating/>
+                    <StarRating starItemClass=""/>
                     
                     <span className="star-rating__text text-heading font-12 fw-500"> {randomRatingText} ratings</span>
                 </div>

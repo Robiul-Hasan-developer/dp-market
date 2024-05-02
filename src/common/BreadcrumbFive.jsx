@@ -41,7 +41,7 @@ const BreadcrumbFive = () => {
                                         <span className="author-rating__text text-heading fw-500 mb-2">Author Rating</span>
                                         <div className="d-flex align-items-center gap-1">
 
-                                            <StarRating/>
+                                            <StarRating starItemClass=""/>
                                             
                                             <span className="star-rating__text text-body font-14"> ({randomRatingText} ratings)</span>
                                         </div>

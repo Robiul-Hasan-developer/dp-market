@@ -13,7 +13,7 @@ const DashboardSidebar = () => {
         <>  
             {
                 collapseSidebar && (
-                    <div class="side-overlay show" onClick={handleCollapseSidebarClose}></div>
+                    <div className="side-overlay show" onClick={handleCollapseSidebarClose}></div>
                 )
             }
             <div className={`dashboard-sidebar ${collapseSidebar ? 'active' : ''}`}>

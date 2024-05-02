@@ -24,7 +24,7 @@ const ProductItem = ({ colClasses, cardClasses, productItem, renderWishlist, ren
         <div className={`${colClasses}`}>
             <div className={`product-card ${cardClasses}`}>
                 <div className="product-card__thumb d-flex">
-                    <Link to={productURL} state={{ thumb, title, author, randomSales, randomRatingText, price }} className="link w-100">
+                    <Link to={productURL} state={{ thumb, title, author, authorThumb, randomSales, randomRatingText, price }} className="link w-100">
                         <img src={thumb} alt="" className="cover-img"/> 
                     </Link>
                     {
@@ -37,7 +37,7 @@ const ProductItem = ({ colClasses, cardClasses, productItem, renderWishlist, ren
                 </div>
                 <div className="product-card__content">
                     <h6 className="product-card__title">
-                        <Link to={productURL} state={{ thumb, title, author, randomSales, randomRatingText, price }} className="link">{title}</Link>
+                        <Link to={productURL} state={{ thumb, title, author, authorThumb, randomSales, randomRatingText, price }} className="link">{title}</Link>
                     </h6>
                     <div className="product-card__info flx-between gap-2">
                         <span className="product-card__author">
@@ -55,7 +55,7 @@ const ProductItem = ({ colClasses, cardClasses, productItem, renderWishlist, ren
                             <span className="product-card__sales font-14 mb-2">{randomSales} Sales</span>
                             <div className="d-flex align-items-center gap-1">
                                 
-                                <StarRating/>
+                                <StarRating starItemClass="font-11"/>
 
                                 <span className="star-rating__text text-heading fw-500 font-14"> ({randomRatingText})</span>
                             </div>
@@ -72,7 +72,7 @@ const ProductItem = ({ colClasses, cardClasses, productItem, renderWishlist, ren
                                     </Link>
                                 )
                             }
-                            <Link to={productURL} state={{ thumb, title, author, randomSales, randomRatingText, price }} className="btn btn-outline-light btn-sm pill">Live Demo</Link>
+                            <Link to={productURL} state={{ thumb, title, author, authorThumb, randomSales, randomRatingText, price }} className="btn btn-outline-light btn-sm pill">Live Demo</Link>
                         </div>
                         
                     </div>

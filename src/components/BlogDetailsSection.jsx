@@ -11,7 +11,6 @@ import BlogSidebar from './BlogDetailsComponent/BlogSidebar';
 const BlogDetailsSection = () => {
 
     const location = useLocation(); 
-    console.log(location);
     
     return (
         <section className="blog-details padding-y-120 position-relative overflow-hidden">

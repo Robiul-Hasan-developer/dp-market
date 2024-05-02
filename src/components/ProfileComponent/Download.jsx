@@ -67,7 +67,7 @@ const Download = () => {
                                             Download <span className="icon-right icon ms-0"> <i className="las la-download"></i></span>  
                                         </button>
                                         <div className="bg-white py-1 px-2 rounded d-inline-block">
-                                            <StarRating/>
+                                            <StarRating starItemClass=""/>
                                         </div>
                                     </div>
                                 </div>

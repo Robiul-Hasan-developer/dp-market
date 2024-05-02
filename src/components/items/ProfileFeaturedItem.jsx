@@ -25,7 +25,7 @@ const ProfileFeaturedItem = ({ featuredItem }) => {
                 <span className="featured-item__text mb-2 text-heading fw-500">{randomSales} Purchases</span>
                 <div className="d-flex align-items-center gap-1">
 
-                    <StarRating/>
+                    <StarRating starItemClass=""/>
                     
                     <span className="star-rating__text text-body font-14"> 5.0 </span>
                     <span className="star-rating__text text-body font-14"> ({randomRatingText})</span>

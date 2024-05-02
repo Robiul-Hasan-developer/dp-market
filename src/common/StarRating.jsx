@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { starRatings } from '../data/CommonData/CommonData';
 
-const StarRating = () => {
+const StarRating = (props) => {
 
     const [unabledIndex, setUnabledIndex] = useState(2); 
 
@@ -15,7 +15,7 @@ const StarRating = () => {
             {
                 starRatings.map((star, index) => {
                     return (
-                        <li className={`star-rating__item ${index >= unabledIndex ? "unabled": "" } `} key={index}>
+                        <li className={`star-rating__item ${index >= unabledIndex ? "unabled": "" } ${props.starItemClass}`} key={index}>
                             {star.icon}
                         </li>
                     )

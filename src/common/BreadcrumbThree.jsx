@@ -96,7 +96,7 @@ const BreadcrumbThree = () => {
                         <li className="nav-item" role="presentation">
                             <button className="nav-link" id="pills-rating-tab" data-bs-toggle="pill" data-bs-target="#pills-rating" type="button" role="tab" aria-controls="pills-rating" aria-selected="false">
                             <span className="d-flex align-items-center gap-1">
-                                <StarRating/>
+                                <StarRating starItemClass=""/>
                                 <span className="star-rating__text text-body"> 5.0</span>
                                 <span className="star-rating__text text-body"> ({location.state.randomRatingText})</span>
                             </span>

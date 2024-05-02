@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionHeading from '../common/SectionHeading';
-import { Link } from 'react-router-dom';
 import { contributorItems } from '../data/HomeTwoData/HomeTwoData';
 import ContributorItem from './items/ContributorItem';
 import Button from '../common/Button';
@@ -53,7 +52,7 @@ const FeaturedContributors = () => {
                         </div>  
                     </div>
                 </div>
-                </section>   
+            </section>   
         </>
     );
 };

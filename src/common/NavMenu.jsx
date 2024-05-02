@@ -11,7 +11,6 @@ const NavMenu = (props) => {
     };
 
     const location = useLocation(); 
-    console.log(location);
 
     return (
         <>
@@ -22,7 +21,6 @@ const NavMenu = (props) => {
                         const isActiveTopLevel = location.pathname === navMenu.path;
 
                         // matches current location paths
-                        // const isActiveSubmenu = navMenu.submenus && navMenu.submenus.some(submenu => location.pathname === submenu.path);
                         const isActiveSubmenu = navMenu.submenus && navMenu.submenus.some(submenu => location.pathname === submenu.path);
 
                         // add activePage class

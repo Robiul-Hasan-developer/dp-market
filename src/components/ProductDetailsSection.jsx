@@ -26,7 +26,7 @@ const ProductDetailsSection = () => {
                                         <div className="product-review__top flx-between">
                                             <div className="product-review__rating flx-align">
                                                 <div className="d-flex align-items-center gap-1">
-                                                    <StarRating/>
+                                                    <StarRating starItemClass=""/>
                                                     <span className="star-rating__text text-body"> 5.0</span>
                                                 </div>
                                                 <span className="product-review__reason">For <span className="product-review__subject">Customer Support</span> </span>
@@ -43,7 +43,7 @@ const ProductDetailsSection = () => {
                                         <div className="product-review__top flx-between">
                                             <div className="product-review__rating flx-align">
                                                 <div className="d-flex align-items-center gap-1">
-                                                    <StarRating/>
+                                                    <StarRating starItemClass=""/>
                                                     <span className="star-rating__text text-body"> 5.0</span>
                                                 </div>
                                                 <span className="product-review__reason">For <span className="product-review__subject">Customer Support</span> </span>

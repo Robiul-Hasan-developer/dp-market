@@ -136,29 +136,29 @@ import itemImage3 from '../../../public/assets/images/thumbs/contributor3.png';
 export const contributorItems = [
     {
         badgeImage: badgeImg,
-        contributorImage: contributorImage1,
-        contributorName: 'Amplify ',
+        authorThumb: contributorImage1,
+        author: 'Amplify ',
         contributorSoled: '12558 Sold Items',
         mainImage: itemImage1
     },
     {
         badgeImage: badgeImg,
-        contributorImage: contributorImage2,
-        contributorName: 'Radiuspoint',
+        authorThumb: contributorImage2,
+        author: 'Radiuspoint',
         contributorSoled: '35462 Sold Items',
         mainImage: itemImage2
     },
     {
         badgeImage: badgeImg,
-        contributorImage: contributorImage3,
-        contributorName: 'Ovious',
+        authorThumb: contributorImage3,
+        author: 'Ovious',
         contributorSoled: '2542 Sold Items',
         mainImage: itemImage3
     },
     {
         badgeImage: badgeImg,
-        contributorImage: contributorImage1,
-        contributorName: 'Themex',
+        authorThumb: contributorImage1,
+        author: 'Themex',
         contributorSoled: '6854 Sold Items',
         mainImage: itemImage1
     },

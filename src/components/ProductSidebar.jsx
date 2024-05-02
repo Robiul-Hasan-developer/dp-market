@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { metaAttributes, sidebarLists } from '../data/OthersPageData/OthersPageData';
 
-import authorImg from '../../public/assets/images/thumbs/author-details-img.png';
 import cartIcon from '../../public/assets/images/icons/add-to-cart.svg';
 import StarRating from '../common/StarRating';
 import BadgeList from './BadgeList';
-import Button from '../common/Button';
 
 const ProductSidebar = () => {
 
     const location = useLocation(); 
+    const { state: { price, author, authorThumb } = {} } = location;
 
     const [openLicense, setOpenLicense] = useState(false);
 
@@ -50,7 +49,7 @@ const ProductSidebar = () => {
                     </div>
                 </div>
 
-                <h6 className="product-sidebar__title">${location.state.price}.00</h6>
+                <h6 className="product-sidebar__title">${price}.00</h6>
             </div>
             <ul className="sidebar-list">
                 {
@@ -84,15 +83,15 @@ const ProductSidebar = () => {
             <div className="author-details">
                 <div className="d-flex align-items-center gap-2">
                     <div className="author-details__thumb flex-shrink-0">
-                        <img src={authorImg} alt=""/>
+                        <img src={authorThumb} alt=""/>
                     </div>
                     <div className="author-details__content">
                         <h6 className="author-details__name font-18 mb-2">
-                            <Link to="/profile" className="link hover-text-main">{location.state.author}</Link>
+                            <Link to="/profile" state={{ authorThumb, author }} className="link hover-text-main">{author}</Link>
                         </h6>
 
                         <span className="d-flex align-items-center gap-1">
-                            <StarRating/>
+                            <StarRating starItemClass=""/>
                             <span className="star-rating__text text-body"> 5.0</span>
                         </span>
                     </div>
@@ -100,11 +99,7 @@ const ProductSidebar = () => {
 
                 <BadgeList badgeListClass="flx-align gap-2 mt-3"/>
 
-                <Button
-                    btnLink="/profile" 
-                    btnClass="btn-outline-light w-100 pill mt-32" 
-                    btnText="View Portfolio" 
-                />
+                <Link to="/profile" state={{ authorThumb, author }} className='btn btn-outline-light w-100 pill mt-32'>View Portfolio</Link>
 
             </div>
             {/* Author Details End */}

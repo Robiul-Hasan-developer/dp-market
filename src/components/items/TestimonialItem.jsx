@@ -10,7 +10,7 @@ const TestimonialItem = ({testimonialItem}) => {
             <img src="assets/images/gradients/testimonial-bg.png" alt="" className="hover-bg white-version"/>
             <img src="assets/images/gradients/testimonial-bg.png" alt="" className="hover-bg dark-version"/>
             <div className="testimonial-item__rating mb-3 d-flex justify-content-start">
-                <StarRating/>
+                <StarRating starItemClass=""/>
             </div>
             <p className="testimonial-item__desc">{desc}</p>
             <div className="testimonial-item__quote">

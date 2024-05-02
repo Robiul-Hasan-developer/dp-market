@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import ProductItem from './items/ProductItem';
 import { products } from '../data/HomeOneData/HomeOneData';
 import SectionHeading from '../common/SectionHeading';
-import { Link } from 'react-router-dom';
-import ProfileThumb from '../../public/assets/images/thumbs/author-img.png';
 import CircleText from '../common/CircleText';
 import Button from '../common/Button';
-
+import AuthorInfo from './AuthorInfo';
+import authorThumb from '../../public/assets/images/thumbs/author-img.png';
+import { Link } from 'react-router-dom';
 
 const FeaturedAuthor = () => {
 
+const author = 'Amplify'; 
     const [follow, setFollow] = useState(false);
 
     const handleFollowClick = () => {
@@ -40,22 +41,13 @@ const FeaturedAuthor = () => {
                                 buttonText="View All Items"
                             />
                             
-                            <div className="author-info d-flex align-items-center gap-3">
-                                <div className="author-info__thumb">
-                                    <img src={ProfileThumb} alt=""/>
-                                </div>
-                                <div className="author-info__content">
-                                    <h4 className="author-info__name mb-1">Amplify</h4>
-                                    <span className="author-info__text">Member Since 2021</span>
-                                </div>
-                            </div>
+                            <AuthorInfo/>
                             
                             <div className="flx-align gap-2 mt-48">
-                                <Button
-                                    btnLink="/profile" 
-                                    btnClass="btn-main btn-lg pill fw-300" 
-                                    btnText="View Profile" 
-                                />
+
+                                <Link to="/profile" state={{ authorThumb, author }} className="btn btn-main btn-lg pill fw-300">
+                                    View Profile
+                                </Link>
 
                                 <button type="button" className={`follow-btn btn btn-outline-light btn-lg pill ${follow ? 'active' : ''}`} onClick={handleFollowClick}>
                                     {

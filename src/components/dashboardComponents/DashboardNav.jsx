@@ -14,7 +14,7 @@ const DashboardNav = () => {
                 <button type="button" className="icon-btn bar-icon text-heading bg-gray-seven flx-center" onClick={handleCollapseSidebar}> 
                     {
                         collapseSidebar ? (
-                            <i class="las la-arrow-right"></i>
+                            <i className="las la-arrow-right"></i>
                         ) : (
                             <i className="las la-bars"></i>
                         )

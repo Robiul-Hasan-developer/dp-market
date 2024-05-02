@@ -53,8 +53,8 @@ const UploadProfileImage = ({ imageType }) => {
           {
             imageType === 'cover' ? (
               <>
-                <span class="icon"> <img src="assets/images/icons/camera-two.svg" alt=""/> </span>
-                <span class="text">Change Cover</span>
+                <span className="icon"> <img src="assets/images/icons/camera-two.svg" alt=""/> </span>
+                <span className="text">Change Cover</span>
               </>
             ) : (
               <img src="assets/images/icons/camera.svg" alt="Upload" />

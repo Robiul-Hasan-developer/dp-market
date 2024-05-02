@@ -28,7 +28,7 @@ const FilterSidebar = () => {
     
     return (
         <>
-            <div class={`side-overlay ${openProductSidebar ? 'show' : ''}`} onClick={handleCloseProductSidebar}></div>
+            <div className={`side-overlay ${openProductSidebar ? 'show' : ''}`} onClick={handleCloseProductSidebar}></div>
             <div className={`filter-sidebar ${openProductSidebar ? 'show' : ''}`}>
                 <button type="button" className="filter-sidebar__close p-2 position-absolute end-0 top-0 z-index-1 text-body hover-text-main font-20 d-lg-none d-block" onClick={handleCloseProductSidebar}>
                     <i className="las la-times"></i>

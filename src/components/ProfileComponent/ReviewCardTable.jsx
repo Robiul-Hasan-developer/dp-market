@@ -57,7 +57,7 @@ const ReviewCardTable = () => {
                                             </td>
                                             <td>
                                                 <div className="d-flex justify-content-center">
-                                                    <StarRating/>
+                                                    <StarRating starItemClass=""/>
                                                 </div>
                                             </td>
                                             <td>
