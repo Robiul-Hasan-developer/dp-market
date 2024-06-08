@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'; 
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react'; 
+import { BrowserRouter, Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
@@ -31,18 +31,34 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 
 function App() {
-
-  // This code will run when i will go to item details page. it will scroll me to template top
+  
+  // This code will run when i will go to item details page. it will scroll me to template top. And when i back to the previous page it will redirect me to the exact previous position.
   const Wrapper = ({ children }) => {
-    const location = useLocation(); 
+    const location = useLocation();
+    const navigationType = useNavigationType();
+    const scrollPositions = useRef({});
 
     useEffect(() => {
-        setTimeout(() => {
-          document.documentElement.scrollTo(0, 0); 
-        }, 0); 
-    }, [location.pathname, location.search]);
-    return children; 
-  }
+      const handleScroll = () => {
+        scrollPositions.current[location.pathname] = window.scrollY;
+      };
+
+      if (navigationType === 'PUSH' || navigationType === 'REPLACE') {
+        document.documentElement.scrollTo(0, 0);
+      } else if (navigationType === 'POP') {
+        const savedPosition = scrollPositions.current[location.pathname];
+        if (savedPosition !== undefined) {
+          window.scrollTo(0, savedPosition);
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, [location.pathname, navigationType]);
+
+    return children;
+  };
+  // This code will run when i will go to item details page. it will scroll me to template top. And when i back to the previous page it will redirect me to the exact previous position.
   
   return (
     <>

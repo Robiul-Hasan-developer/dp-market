@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
-import PaymentMethods from './PaymentMethods';
 import { paymentMethods } from '../data/OthersPageData/OthersPageData';
 
 var settings = {
@@ -15,8 +14,6 @@ var settings = {
     draggable: true,
     speed: 900,
     infinite: true,
-    prevArrow: <button type="button" className="slick-prev"><i className="las la-arrow-left"></i></button>,
-    nextArrow: <button type="button" className="slick-next"><i className="las la-arrow-right"></i></button>,
     responsive: [
       {
         breakpoint: 1299,
@@ -59,6 +56,8 @@ const PaymentMethodSection = () => {
         navigate('/cart-preview'); 
     }
     
+    const slider = React.useRef(null);
+    
     return (
         <section className="cart-payment padding-y-120 overflow-hidden">
             <div className="container container-two">
@@ -66,7 +65,7 @@ const PaymentMethodSection = () => {
                 <div className="payment-method">
                     <h5 className="payment-method__title mb-4">Payment Method</h5>
                     <div className="payment-method__slider arrow-sm position-relative overflow-hidden">
-                        <Slider {...settings}>
+                        <Slider {...settings} ref={slider}>
                         {
                             paymentMethods.map((paymentMethod, paymentMethodIndex) => {
                                 return (
@@ -80,6 +79,12 @@ const PaymentMethodSection = () => {
                             })
                         }
                         </Slider>
+                        <button className='slick-arrow slick-prev' onClick={() => slider?.current?.slickPrev()}> 
+                            <i className="fas fa-arrow-left"></i> 
+                        </button>
+                        <button className='slick-arrow slick-next' onClick={() => slider?.current?.slickNext()}> 
+                            <i className="fas fa-arrow-right"></i> 
+                        </button>
                     </div>
                 </div>
                 

@@ -4,42 +4,42 @@ import ProductItem from './items/ProductItem';
 import Slider from "react-slick";
 import SectionHeading from '../common/SectionHeading';
 
-const SellingProducts = (props) => {
+var settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    pauseOnHover: true,
+    arrows: true,
+    draggable: true,
+    speed: 900,
+    infinite: true,
+    responsive: [
+    {
+        breakpoint: 991,
+        settings: {
+        slidesToShow: 2,
+        }
+    },
+    {
+        breakpoint: 767,
+        settings: {
+        slidesToShow: 2,
+        }
+    },
+    {
+        breakpoint: 575,
+        settings: {
+        slidesToShow: 1,
+        }
+    },
+    ]
+};
 
-    var settings = {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        pauseOnHover: true,
-        arrows: true,
-        draggable: true,
-        speed: 900,
-        infinite: true,
-        prevArrow: <button type="button" className="slick-prev"><i className="las la-arrow-left"></i></button>,
-        nextArrow: <button type="button" className="slick-next"><i className="las la-arrow-right"></i></button>,
-        responsive: [
-        {
-            breakpoint: 991,
-            settings: {
-            slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-            slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 575,
-            settings: {
-            slidesToShow: 1,
-            }
-        },
-        ]
-    };
+const SellingProducts = (props) => {
+    
+    const slider = React.useRef(null);
     
     return (
         <section className="selling-product padding-y-120 position-relative z-index-1 overflow-hidden">
@@ -65,7 +65,7 @@ const SellingProducts = (props) => {
                 />
 
                 <div className="selling-product-slider overflow-hidden position-relative">
-                    <Slider {...settings}>
+                    <Slider {...settings} ref={slider}>
                         {
                             products.slice(1, 5).map((productItem, productIndex) => {
                                 return (
@@ -81,6 +81,12 @@ const SellingProducts = (props) => {
                             })
                         }
                     </Slider>
+                    <button className='slick-arrow slick-prev' onClick={() => slider?.current?.slickPrev()}> 
+                        <i className="fas fa-arrow-left"></i> 
+                    </button>
+                    <button className='slick-arrow slick-next' onClick={() => slider?.current?.slickNext()}> 
+                        <i className="fas fa-arrow-right"></i> 
+                    </button>
                 </div>
             </div>
         </section>

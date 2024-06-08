@@ -15,8 +15,6 @@ var settings = {
     draggable: true,
     speed: 900,
     infinite: true,
-    prevArrow: <button type="button" className="slick-prev"><i className="las la-arrow-left"></i></button>,
-    nextArrow: <button type="button" className="slick-next"><i className="las la-arrow-right"></i></button>,
     responsive: [
       {
         breakpoint: 1199,
@@ -40,6 +38,9 @@ var settings = {
 };
 
 const Resources = () => {
+
+  const slider = React.useRef(null);
+
     return (
         <section className="resource  padding-y-120 section-bg position-relative z-index-1 overflow-hidden">
             <img src="assets/images/shapes/element-moon3.png" alt="" className="element one"/>
@@ -59,7 +60,7 @@ const Resources = () => {
 
                 <div className="resource-slider gy-4 overflow-hidden position-relative">
 
-                    <Slider {...settings}>
+                    <Slider {...settings} ref={slider}>
                         {
                             products.slice(0,5).map((productItem, productIndex) => {
                                 return (
@@ -75,7 +76,12 @@ const Resources = () => {
                             })
                         }
                     </Slider>
-                    
+                    <button className='slick-arrow d-none slick-prev' onClick={() => slider?.current?.slickPrev()}> 
+                        <i className="fas fa-arrow-left"></i> 
+                    </button>
+                    <button className='slick-arrow d-none slick-next' onClick={() => slider?.current?.slickNext()}> 
+                        <i className="fas fa-arrow-right"></i> 
+                    </button>
                 </div>
             </div>
         </section>

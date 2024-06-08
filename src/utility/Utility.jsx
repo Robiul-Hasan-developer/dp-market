@@ -88,6 +88,4 @@ export const getCurrentTime = () => {
 //     // Set an interval to update the time every second
 //     const interval = setInterval(updateTime, 1000);
 // }, []); 
-
-
 // ================================ Utility Data End ================================
